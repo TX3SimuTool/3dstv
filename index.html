@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>3DSTV</title>
+<link rel="shortcut icon" href="res/icon/favicon.ico" />
+<meta name="viewport" content="width=320">
+</head>
+<body>
+<center>
+<img src="assets/logo.png"><br>
+<label>Select a country:</label><br>
+<a href="usa/"><button>United States</button></a><br>
+<a href="eur/"><button>Europe</button></a><br>
+<a href="jap/"><button>Japan</button></a><br>
+<a href="uk/"><button>United Kingdom</button></a><br>
+<a href="bra/"><button>Brazil</button></a><br>
+</center>
+<script type="text/javascript">
+    if (navigator.userAgent.indexOf('Nintendo 3DS') == -1) { //If the UserAgent is not "Nintendo 3DS"
+        location.replace('unsupported.html'); //Redirect to an other page
+    }
+</script>
+</body>
+</html>
