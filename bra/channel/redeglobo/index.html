@@ -1,0 +1,189 @@
+<html>
+<head>
+<title>3DSTV USA: Channel 1</title>
+<link rel="shortcut icon" href="../res/icon/favicon.ico" />
+<meta name="viewport" content="width=320">
+<style type="text/css">
+ #point {
+    width: 320;
+    height: 1;
+    background: black;
+ }
+ body {
+ margin: 0px;
+ background-image: url("../../assets/background.png");
+ }
+ table, th, td {
+ border: 1px solid;
+ }
+</style>
+</head>
+<body onload="loaded()">
+<center>
+<img id="signal" width="320" height="220" src="../../signal.gif">
+<img id="channel" style="display: none;" width="320" height="220" src="">
+<h1>Rede Globo</h1>
+<div id="point"></div><br>
+<table>
+  <tr>
+    <caption>Guia de programação:</caption>
+  </tr>
+  <tr>
+    <td>05:00</td>
+    <td>Telecurso</td>
+  </tr>
+  <tr>
+    <td>06:00</td>
+    <td>Globo Rural</td>
+  </tr>
+  <tr>
+    <td>07:00</td>
+    <td>Bom Dia Brasil</td>
+  </tr>
+  <tr>
+    <td>08:00</td>
+    <td>Mais Você</td>
+  </tr>
+  <tr>
+    <td>09:00</td>
+    <td>Bem Estar</td>
+  </tr>
+  <tr>
+    <td>10:00</td>
+    <td>TV Globinho</td>
+  </tr>
+  <tr>
+    <td>12:00</td>
+    <td>Globo Esporte</td>
+  </tr>
+  <tr>
+    <td>13:00</td>
+    <td>Jornal Hoje</td>
+  </tr>
+  <tr>
+    <td>14:00</td>
+    <td>Vale a Pena Ver de Novo</td>
+  </tr>
+  <tr>
+    <td>15:00</td>
+    <td>Sessão da Tarde</td>
+  </tr>
+  <tr>
+    <td>17:00</td>
+    <td>Malhação</td>
+  </tr>
+  <tr>
+  <td>18:00</td>
+  <td>Cordel Encantado</td>
+  </tr>
+  <tr>
+  <td>19:00</td>
+  <td>Morde & Assopra</td>
+  </tr>
+  <tr>
+  <td>20:00</td>
+  <td>Jornal Nacional</td>
+  </tr>
+  <tr>
+  <td>21:00</td>
+  <td>Insensato Coração</td>
+  </tr>
+  <tr>
+  <td>22:00</td>
+  <td>Tapas e Beijos</td>
+  </tr>
+  <tr>
+  <td>23:00</td>
+  <td>Profissão Reporter</td>
+  </tr>
+  <tr>
+  <td>00:00</td>
+  <td>Jornal da Globo</td>
+  </tr>
+  <tr>
+  <td>01:00</td>
+  <td>Programa do Jô</td>
+  </tr>
+  <tr>
+  <td>02:00</td>
+  <td>Lie to Me</td>
+  </tr>
+  <tr>
+  <td>03:00</td>
+  <td>Corujão</td>
+  </tr>
+</table>
+</center>
+<script type="text/javascript">
+   var time = new Date().getHours();
+   var program;
+   if (time == 1) {
+   program = "scene/programadojo.gif";
+   } else if (time == 2) {
+   program = "scene/lietome.gif";
+   } else if (time == 3) {
+   program = "scene/corujao.gif";
+   } else if (time == 4) {
+   program = "scene/corujao.gif";
+   } else if (time == 5) {
+   program = "scene/telecurso.gif";
+   } else if (time == 6) {
+   program = "scene/globorural.gif";
+   } else if (time == 7) {
+   program = "scene/bomdiabrasil.gif";
+   } else if (time == 8) {
+   program = "scene/maisvoce.gif";
+   } else if (time == 9) {
+   program = "scene/bemestar.gif";
+   } else if (time == 10) {
+   program = "scene/tvglobinho.gif";
+   } else if (time == 11) {
+   program = "scene/tvglobinho.gif";
+   } else if (time == 12) {
+   program = "scene/globoesporte.gif";
+   } else if (time == 13) {
+   program = "scene/jornalhoje.gif";
+   } else if (time == 14) {
+   program = "scene/valeapenaverdenovo.gif";
+   } else if (time == 15) {
+   program = "scene/sessaodatarde.gif";
+   } else if (time == 16) {
+   program = "scene/sessaodatarde.gif";
+   } else if (time == 17) {
+   program = "scene/malhacao.gif";
+   } else if (time == 18) {
+   program = "scene/cordelencantado.gif";
+   } else if (time == 19) {
+   program = "scene/mordeeassopra.gif";
+   } else if (time == 20) {
+   program = "scene/jornalnacional.gif";
+   } else if (time == 21) {
+   program = "scene/insensatocoracao.gif";
+   } else if (time == 22) {
+   program = "scene/tapasebeijos.gif";
+   } else if (time == 23) {
+   program = "scene/profissaoreporter.gif";
+   } else {
+   program = "scene/jornaldaglobo.gif";
+   }
+   document.getElementById("channel").src = program;
+</script>
+<script type="text/javascript">
+    window.setInterval('auto()', 100000);
+    
+    function refresh() {
+        window.location.reload();
+    }
+</script>
+<script type="text/javascript">
+    if (navigator.userAgent.indexOf('Nintendo 3DS') == -1) { //If the UserAgent is not "Nintendo 3DS"
+        location.replace('../../unsupported.html'); //Redirect to an other page
+    }
+    
+    function loaded() {
+        document.getElementById("signal").style.display = "none";
+        document.getElementById("channel").style.display = "block";
+    }
+</script>
+</body>
+</html>
