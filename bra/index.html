@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>3DSTV Brasil</title>
+<link rel="shortcut icon" href="../res/icon-br/favicon.ico" />
+<meta name="viewport" content="width=320">
+<style type="text/css">
+body {
+margin: 0px;
+}
+#TopScreen {
+background-image: url("assets/logo.png");
+width: 320px;
+height: 220px;
+overflow: hidden;
+}
+#Main {
+background-image: url("assets/background.png");
+width: 320px;
+}
+table, th, td {
+    border: 1px solid;
+ }
+</style>
+</head>
+<body>
+<div id="TopScreen">
+</div>
+<div id="Main">
+<center>
+<table>
+<tr>
+<caption>Lista de Canais:</caption>
+</tr>
+<tr>
+<td><img src="channel/redeglobo/icon.png"></td>
+<td><a href="channel/redeglobo/index.html" >Rede Globo</a></td>
+</tr>
+</table>
+</center>
+</div>
+<script type="text/javascript">
+    if (navigator.userAgent.indexOf('Nintendo 3DS') == -1) { //If the UserAgent is not "Nintendo 3DS"
+        location.replace('unsupported.html'); //Redirect to an other page
+    }
+</script>
+</body>
+</html>
