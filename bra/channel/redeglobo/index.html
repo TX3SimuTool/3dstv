@@ -18,7 +18,7 @@
  }
 </style>
 </head>
-<body onload="loaded()">
+<body onload="loaded(),scrolling()">
 <center>
 <img id="signal" width="320" height="220" src="../../signal.gif">
 <img id="channel" style="display: none;" width="320" height="220" src="">
@@ -181,11 +181,13 @@
     }
     
     function loaded() {
-        window.scrollTo(0, 220);
-        document.getElementById("signal").style.display = "none"
+        document.getElementById("signal").style.display = "none";
         document.getElementById("channel").style.display = "block";
     }
 
+    function scrolling() {
+        window.scrollTo(0, 220);
+    }
 </script>
 </body>
 </html>
